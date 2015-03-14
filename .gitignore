@@ -1,4 +1,5 @@
 .gradle
+app/app-release.apk
 /local.properties
 /.idea/workspace.xml
 /.idea/libraries
