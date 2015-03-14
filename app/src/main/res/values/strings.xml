@@ -9,18 +9,16 @@
 
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
-
-    <!--<string name="fota_format_desc">Delete FOTAKernel</string>
-    <string name="fota_backup_desc">Backup FOTAKernel</string>
-    <string name="fota_restore_desc">Restore FOTAKernel</string>-->
     <string name="fota_format_button">FORMAT</string>
     <string name="fota_backup_button">BACKUP</string>
     <string name="fota_restore_button">RESTORE</string>
 
+    <string name="warning">WARNING: THIS APP FLASH A CUSTOM KERNEL IN YOUR DEVICE TO GET A WORKING CUSTOM RECOVERY. NEED ROOT AND BOOTLOADER UNLOCKED</string>
+
+    <string name="warningbackup">PLEASE, MAKE A BACKUP BEFORE USE THIS APP.</string>
+
     <string name="boot_download_button">DOWNLOAD</string>
-    <!--<string name="boot_download_desc">Get the latest kernel</string>-->
     <string name="boot_flash_button">FLASH</string>
-    <!--<string name="boot_flash_desc"></string>-->
 
     <string name="flashfota_format_succeeded">Successfully formatted</string>
     <string name="flashfota_format_failed">Failed to flash</string>

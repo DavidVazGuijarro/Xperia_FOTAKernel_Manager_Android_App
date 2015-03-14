@@ -4,6 +4,28 @@
     android:layout_height="match_parent"
     tools:context="com.davidvaz.bootxperia.fragment.BootFragment">
 
+    <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="top"
+         android:layout_marginTop="2dp"
+         android:layout_marginBottom="2dp"
+         android:text="@string/warning"
+        android:textStyle="bold"
+        android:textColor="#ff1000ff" />
+
+    <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="top"
+         android:layout_marginTop="51dp"
+         android:layout_marginBottom="2dp"
+         android:text="@string/warningbackup"
+        android:textColor="#ffff001c"
+        android:textIsSelectable="false"
+        android:textSize="15dp"
+        android:textStyle="normal|bold" />
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
