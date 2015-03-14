@@ -15,7 +15,8 @@
          android:layout_marginBottom="-170dp"
          android:text="@string/warning"
         android:textStyle="bold"
-        android:textColor="#ff1000ff" />
+        android:textColor="#ffff001c"
+        android:id="@+id/AppTheme" />
 
     <TextView
          android:layout_width="wrap_content"
