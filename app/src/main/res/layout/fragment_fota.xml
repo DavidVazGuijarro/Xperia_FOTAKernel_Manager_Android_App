@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.davidvaz.bootxperia.fragment.FotaFragment"
-    android:gravity="center">
+    android:gravity="center"
+    android:clickable="true">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -12,55 +13,53 @@
         android:orientation="vertical"
         android:id="@+id/linearLayout2">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:orientation="horizontal">
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/fota_format_button"
-                android:text="@string/fota_format_button" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:orientation="horizontal"
-            android:weightSum="1">
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:id="@+id/fota_backup_button"
-                android:text="@string/fota_backup_button" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:orientation="horizontal">
-
-        </LinearLayout>
-
 
     </LinearLayout>
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fota_backup_button"
+        android:text="@string/fota_backup_button"
+        android:gravity="center"
+        android:clickable="true"
+        android:enabled="true"
+        android:layout_below="@+id/fota_restore_button"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="50dp"
+        android:layout_alignLeft="@+id/fota_restore_button"
+        android:layout_alignStart="@+id/fota_restore_button" />
+
+    <Button
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/fota_restore_button"
         android:text="@string/fota_restore_button"
-        android:layout_marginTop="140dp"
-        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:clickable="true"
+        android:enabled="true"
+        android:layout_below="@+id/fota_format_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="20dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fota_format_button"
+        android:text="@string/fota_format_button"
+        android:layout_alignTop="@+id/linearLayout2"
         android:layout_centerHorizontal="true"
-        android:gravity="center" />
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:clickable="true"
+        android:enabled="true"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="0dp" />
 
 </RelativeLayout>
