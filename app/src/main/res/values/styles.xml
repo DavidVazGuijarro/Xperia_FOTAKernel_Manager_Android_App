@@ -1,14 +1,25 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppDefTheme" parent="android:Theme.DeviceDefault">
+    <!--<style name="AppTheme" parent="AppTheme.Base"/>-->
+ 
+    <!--<style name="AppTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">-->
+    <!--<style name="AppTheme" parent="android:Theme.Material.Light.DarkActionBar"> -->
+    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-    </style>
-
-    <style name="AppLightTheme" parent="android:Theme.Holo.Light"></style>
-
-    <style name="AppTheme" parent="android:Theme.Holo">
-
+ 
+        <!-- colorPrimary is used for the default action bar background -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+ 
+        <!-- colorPrimaryDark is used for the status bar -->
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+ 
+        <!-- colorAccent is used as the default value for colorControlActivated
+             which is used to tint widgets -->
+        <item name="colorAccent">@color/colorAccent</item>
+ 
+        <!-- You can also set colorControlNormal, colorControlActivated
+             colorControlHighlight & colorSwitchThumbNormal. -->
     </style>
 
 </resources>
