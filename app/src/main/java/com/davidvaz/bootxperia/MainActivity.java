@@ -1,4 +1,4 @@
-package in.championswimmer.twrpxperia;
+package com.davidvaz.bootxperia;
 
 import android.app.ActionBar;
 import android.app.Activity;
@@ -13,24 +13,18 @@ import android.support.v4.widget.DrawerLayout;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import in.championswimmer.twrpxperia.flashutils.FlashFota;
-import in.championswimmer.twrpxperia.flashutils.GetImg;
-import in.championswimmer.twrpxperia.fragment.CmFragment;
-import in.championswimmer.twrpxperia.fragment.CwmFragment;
-import in.championswimmer.twrpxperia.fragment.FotaFragment;
-import in.championswimmer.twrpxperia.fragment.PhilzFragment;
-import in.championswimmer.twrpxperia.fragment.TwrpFragment;
+import com.davidvaz.bootxperia.flashutils.FlashFota;
+import com.davidvaz.bootxperia.flashutils.GetImg;
+import com.davidvaz.bootxperia.fragment.FotaFragment;
+import com.davidvaz.bootxperia.fragment.BootFragment;
 
 ;
 
 public class MainActivity extends Activity
         implements
         NavigationDrawerFragment.NavigationDrawerCallbacks,
-        CwmFragment.OnFragmentInteractionListener,
-        PhilzFragment.OnFragmentInteractionListener,
-        CmFragment.OnFragmentInteractionListener,
         FotaFragment.OnFragmentInteractionListener,
-        TwrpFragment.OnFragmentInteractionListener {
+        BootFragment.OnFragmentInteractionListener {
 
     private String HAS_ROOT_PREF = "hasRoot";
 
@@ -145,22 +139,7 @@ public class MainActivity extends Activity
                 break;
             case 1:
                 fragmentManager.beginTransaction()
-                        .replace(R.id.container, TwrpFragment.newInstance("A", "a"))
-                        .commit();
-                break;
-            case 2:
-                fragmentManager.beginTransaction()
-                        .replace(R.id.container, CwmFragment.newInstance("A", "a"))
-                        .commit();
-                break;
-            case 3:
-                fragmentManager.beginTransaction()
-                        .replace(R.id.container, PhilzFragment.newInstance("A", "a"))
-                        .commit();
-                break;
-            case 4:
-                fragmentManager.beginTransaction()
-                        .replace(R.id.container, CmFragment.newInstance("A", "a"))
+                        .replace(R.id.container, BootFragment.newInstance("A", "a"))
                         .commit();
                 break;
         }

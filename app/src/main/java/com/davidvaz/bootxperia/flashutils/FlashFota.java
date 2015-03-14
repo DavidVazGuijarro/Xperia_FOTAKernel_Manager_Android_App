@@ -1,4 +1,4 @@
-package in.championswimmer.twrpxperia.flashutils;
+package com.davidvaz.bootxperia.flashutils;
 
 import android.content.Context;
 import android.os.Build;
@@ -12,10 +12,10 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-import in.championswimmer.twrpxperia.R;
+import com.davidvaz.bootxperia.R;
 
 /**
- * Created by championswimmer on 22/1/14.
+ * Created by davidvaz on 22/1/14.
  */
 public class FlashFota {
 
@@ -23,7 +23,7 @@ public class FlashFota {
 
 
     private String FOTA_PATH = "/dev/block/platform/msm_sdcc.1/by-name/";
-    private String XPERIA = "yuga";
+    private String XPERIA = "leo";
     private String method;
     SaveDir dir = new SaveDir();
     private Context c;

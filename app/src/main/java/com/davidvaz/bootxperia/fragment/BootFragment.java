@@ -1,4 +1,4 @@
-package in.championswimmer.twrpxperia.fragment;
+package com.davidvaz.bootxperia.fragment;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -13,32 +13,33 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import in.championswimmer.twrpxperia.R;
-import in.championswimmer.twrpxperia.flashutils.FlashFota;
-import in.championswimmer.twrpxperia.flashutils.GetImg;
-import in.championswimmer.twrpxperia.flashutils.SaveDir;
+import com.davidvaz.bootxperia.R;
+import com.davidvaz.bootxperia.flashutils.FlashFota;
+import com.davidvaz.bootxperia.flashutils.GetImg;
+import com.davidvaz.bootxperia.flashutils.SaveDir;
 
 
 /**
- * A simple {@link android.support.v4.app.Fragment} subclass.
- * Activities that contain this in.championswimmer.twrpxperia.fragment must implement the
- * {@link in.championswimmer.twrpxperia.fragment.CmFragment.OnFragmentInteractionListener} interface
+ * A simple {android.support.v4.app.Fragment} subclass.
+ * Activities that contain this com.davidvaz.bootxperia.fragment must implement the
+ * {@link bootFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link in.championswimmer.twrpxperia.fragment.CmFragment#newInstance} factory method to
- * create an instance of this in.championswimmer.twrpxperia.fragment.
+ * Use the {@link bootFragment#newInstance} factory method to
+ * create an instance of this com.davidvaz.bootxperia.fragment.
  */
-public class CmFragment extends Fragment {
+public class BootFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
-    // the in.championswimmer.twrpxperia.fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+    // the com.davidvaz.bootxperia.fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
     private String HAS_ROOT_PREF = "hasRoot";
 
+
     private FlashFota ff;
     private Boolean hasRoot;
-    private Boolean cmExists;
     private SaveDir dir;
+    private Boolean bootExists;
     private GetImg gi;
 
 
@@ -50,15 +51,15 @@ public class CmFragment extends Fragment {
 
     /**
      * Use this factory method to create a new instance of
-     * this in.championswimmer.twrpxperia.fragment using the provided parameters.
+     * this com.davidvaz.bootxperia.fragment using the provided parameters.
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of in.championswimmer.twrpxperia.fragment CmFragment.
+     * @return A new instance of com.davidvaz.bootxperia.fragment bootFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static CmFragment newInstance(String param1, String param2) {
-        CmFragment fragment = new CmFragment();
+    public static BootFragment newInstance(String param1, String param2) {
+        BootFragment fragment = new BootFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -66,7 +67,7 @@ public class CmFragment extends Fragment {
         return fragment;
     }
 
-    public CmFragment() {
+    public BootFragment() {
         // Required empty public constructor
     }
 
@@ -78,7 +79,7 @@ public class CmFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
         dir = new SaveDir();
-        cmExists = dir.existsCmImage();
+        bootExists = dir.existsbootImage();
         ff = new FlashFota(getActivity().getApplicationContext());
         SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(getActivity().getApplicationContext());
         hasRoot = pref.getBoolean(HAS_ROOT_PREF, false);
@@ -86,25 +87,25 @@ public class CmFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(final LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(final LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this in.championswimmer.twrpxperia.fragment
-        final View rootView = inflater.inflate(R.layout.fragment_cm, container, false);
-        final Button downloadButton = (Button) rootView.findViewById(R.id.cm_download_button);
-        Button flashButton = (Button) rootView.findViewById(R.id.cm_flash_button);
+        // Inflate the layout for this com.davidvaz.bootxperia.fragment
+        final View rootView = inflater.inflate(R.layout.fragment_boot, container, false);
+        final Button downloadButton = (Button) rootView.findViewById(R.id.boot_download_button);
+        Button flashButton = (Button) rootView.findViewById(R.id.boot_flash_button);
 
-        //enable flash only if cm.img exists
-        flashButton.setEnabled((cmExists) && (hasRoot));
+        //enable flashing only if boot.img exists and we have root
+        flashButton.setEnabled((bootExists) && (hasRoot));
 
         flashButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (dir.validCm()) {
-                    ff.flashimg(dir.RAW_CM_PATH);
+                if (dir.validboot()) {
+                    ff.flashimg(dir.RAW_BOOT_PATH);
                 } else {
                     AlertDialog.Builder ad = new AlertDialog.Builder(inflater.getContext());
                     ad.setTitle("WARNING");
-                    ad.setMessage(getResources().getString(R.string.alert_invalid_cm_image));
+                    ad.setMessage(getResources().getString(R.string.alert_invalid_boot_image));
                     ad.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
@@ -113,7 +114,7 @@ public class CmFragment extends Fragment {
                     ad.setPositiveButton("Flash anyway", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
-                            ff.flashimg(dir.RAW_CM_PATH);
+                            ff.flashimg(dir.RAW_BOOT_PATH);
                         }
                     });
                     ad.show();
@@ -124,7 +125,7 @@ public class CmFragment extends Fragment {
         downloadButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                gi.downloadCm();
+                gi.downloadboot();
             }
         });
 
@@ -157,7 +158,7 @@ public class CmFragment extends Fragment {
 
     /**
      * This interface must be implemented by activities that contain this
-     * in.championswimmer.twrpxperia.fragment to allow an interaction in this in.championswimmer.twrpxperia.fragment to be communicated
+     * com.davidvaz.bootxperia.fragment to allow an interaction in this com.davidvaz.bootxperia.fragment to be communicated
      * to the activity and potentially other fragments contained in that
      * activity.
      * <p/>
