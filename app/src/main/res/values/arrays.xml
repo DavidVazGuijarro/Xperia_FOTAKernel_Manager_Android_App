@@ -22,15 +22,15 @@
 
     <string-array name="supported_device_codename">
         <item>leo</item>
-        <item>LEO</item>
         <item>leo</item>
-        <item>LEO</item>
         <item>leo</item>
-        <item>LEO</item>
         <item>leo</item>
-        <item>LEO</item>
         <item>leo</item>
-        <item>LEO</item>
+        <item>leo</item>
+        <item>leo</item>
+        <item>leo</item>
+        <item>leo</item>
+        <item>leo</item>
         <item>leo</item>
     </string-array>
 
