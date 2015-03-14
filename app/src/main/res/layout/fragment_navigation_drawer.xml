@@ -2,8 +2,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:choiceMode="singleChoice"
+    android:choiceMode="multipleChoice"
     android:divider="@android:color/transparent"
     android:dividerHeight="0dp"
+    tools:context="com.davidvaz.bootxperia.NavigationDrawerFragment"
+    style="@style/Base.V21.Theme.AppCompat.Light"
     android:background="#cccc"
-    tools:context="com.davidvaz.bootxperia.NavigationDrawerFragment" />
+    android:backgroundTintMode="multiply"
+    android:clickable="false"
+    android:drawSelectorOnTop="false"
+    android:textFilterEnabled="false"
+    android:theme="@style/Base.V21.Theme.AppCompat.Light.Dialog" />
