@@ -6,10 +6,11 @@
     android:divider="@android:color/transparent"
     android:dividerHeight="0dp"
     tools:context="com.davidvaz.bootxperia.NavigationDrawerFragment"
-    style="@style/Base.V21.Theme.AppCompat.Light"
+    style="@style/AppTheme"
     android:background="#cccc"
     android:backgroundTintMode="multiply"
     android:clickable="false"
     android:drawSelectorOnTop="false"
     android:textFilterEnabled="false"
-    android:theme="@style/Base.V21.Theme.AppCompat.Light.Dialog" />
+    android:theme="@style/Base.V21.Theme.AppCompat.Light.Dialog"
+    android:id="@+id/AppTheme" />
