@@ -61,7 +61,7 @@ public class MainActivity extends Activity
             AlertDialog.Builder noSupportAlert = new AlertDialog.Builder(this);
             noSupportAlert.setTitle("UNSUPPORTED DEVICE");
             noSupportAlert.setMessage
-                    ("This device is not officially supported by the app" +
+                    ("This device is not supported by the app" +
                     "\n" +
                     "Recoveries downloaded by the app may not be compatible" +
                     "with your device as it has not been tested on it" +

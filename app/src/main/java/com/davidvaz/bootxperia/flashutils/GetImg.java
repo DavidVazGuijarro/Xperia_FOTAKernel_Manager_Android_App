@@ -53,7 +53,7 @@ public class GetImg {
         String url = BOOT_BASE_URL + deviceName + "/boot.img";
         Log.d(LOG_TAG, "downloading " + url);
         DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
-        request.setDescription("boot recovery for " + deviceName);
+        request.setDescription("kernel for " + deviceName);
         request.setTitle("kernel.img");
         request.allowScanningByMediaScanner();
         request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
@@ -75,7 +75,7 @@ public class GetImg {
         DownloadManager manager = (DownloadManager) c.getSystemService(Context.DOWNLOAD_SERVICE);
         manager.enqueue(request);
         Toast done = Toast.makeText(c,
-                "boot Recovery image downloading to \n"
+                "kernel image downloading to \n"
                 + boot.getPath(),
                 Toast.LENGTH_LONG);
         done.show();

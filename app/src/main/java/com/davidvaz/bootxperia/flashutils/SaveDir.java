@@ -11,7 +11,7 @@ public class SaveDir {
 
     private String LOG_TAG = "XRM";
 
-    public static String STORAGE_DIRECTORY = Environment.getExternalStorageDirectory().getPath() + "/bootXperia/";
+    public static String STORAGE_DIRECTORY = Environment.getExternalStorageDirectory().getPath() + "/BootXperia/";
     public static String RAW_BOOT_PATH = "/sdcard/bootXperia/kernel.img";
     public static String RAW_BACKUP_PATH = "/sdcard/bootXperia/fotabackup.img";
 
