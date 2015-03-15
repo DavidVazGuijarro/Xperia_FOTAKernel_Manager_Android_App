@@ -56,8 +56,8 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/boot_flash_button"
-        android:text="@string/boot_flash_button"
+        android:id="@+id/twrp_flash_button"
+        android:text="@string/twrp_flash_button"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:layout_alignParentEnd="true"
@@ -73,9 +73,9 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/boot_download_button"
-        android:text="@string/boot_download_button"
-        android:layout_above="@+id/boot_flash_button"
+        android:id="@+id/twrp_download_button"
+        android:text="@string/twrp_download_button"
+        android:layout_above="@+id/twrp_flash_button"
         android:layout_centerHorizontal="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true"

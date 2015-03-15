@@ -12,8 +12,10 @@ public class SaveDir {
     private String LOG_TAG = "XRM";
 
     public static String STORAGE_DIRECTORY = Environment.getExternalStorageDirectory().getPath() + "/BootXperia/";
-    public static String RAW_BOOT_PATH = "/sdcard/bootXperia/kernel.img";
-    public static String RAW_BACKUP_PATH = "/sdcard/bootXperia/fotabackup.img";
+    public static String RAW_BOOT_PATH = "/sdcard/BootXperia/twrp.img";
+    public static String RAW_BACKUP_PATH = "/sdcard/BootXperia/fotabackup.img";
+    public static String RAW_CWM_PATH = "/sdcard/BootXperia/cwm.img";
+    public static String RAW_PHILZ_PATH = "/sdcard/BootXperia/philz.img";
 
     public SaveDir() {
         File valid = new File(STORAGE_DIRECTORY + "valid.txt");
@@ -22,9 +24,19 @@ public class SaveDir {
         }
     }
 
+    public Boolean existsCwmImage() {
+        File cwm = new File(STORAGE_DIRECTORY + "cwm.img");
+        return cwm.exists();
+    }
+
     public Boolean existsbootImage() {
-        File boot = new File(STORAGE_DIRECTORY + "kernel.img");
+        File boot = new File(STORAGE_DIRECTORY + "twrp.img");
         return boot.exists();
+    }
+
+    public Boolean existsPhilzImage() {
+        File philz = new File(STORAGE_DIRECTORY + "philz.img");
+        return philz.exists();
     }
 
     public Boolean existsFotaBackup() {
@@ -32,8 +44,16 @@ public class SaveDir {
         return backup.exists();
     }
 
+    public String cwmPath() {
+        return STORAGE_DIRECTORY + "cwm.img";
+    }
+
     public String bootPath() {
-        return STORAGE_DIRECTORY + "kernel.img";
+        return STORAGE_DIRECTORY + "twrp.img";
+    }
+
+    public String philzPath() {
+        return STORAGE_DIRECTORY + "philz.img";
     }
 
 
@@ -41,8 +61,16 @@ public class SaveDir {
         return STORAGE_DIRECTORY + "fotabackup.img";
     }
 
+    public Boolean validCwm(){
+        File f = new File(cwmPath());
+        return (((f.length() / 1024) / 1024) > 5);
+    }
     public Boolean validboot() {
         File f = new File(bootPath());
+        return (((f.length() / 1024) / 1024) > 5);
+    }
+    public Boolean validPhilz() {
+        File f = new File(philzPath());
         return (((f.length() / 1024) / 1024) > 5);
     }
 }

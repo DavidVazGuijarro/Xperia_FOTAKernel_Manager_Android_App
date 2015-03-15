@@ -19,7 +19,9 @@ import com.davidvaz.bootxperia.R;
 public class GetImg {
     private String LOG_TAG = "XRM";
 
-    private static String BOOT_BASE_URL = "http://davidvazguijarro.uni.me/davidvazguijarro/boot/boot/";
+    private static String TWRP_BASE_URL = "http://davidvazguijarro.uni.me/davidvazguijarro/boot/twrp/";
+    private static String CWM_BASE_URL = "http://davidvazguijarro.uni.me/davidvazguijarro/boot/cwm/";
+    private static String PHILZ_BASE_URL = "http://davidvazguijarro.uni.me/davidvazguijarro/boot/philz/";
     
 
     private String[] codenames, props;
@@ -49,34 +51,99 @@ public class GetImg {
         return supported;
     }
 
-    public void downloadboot() {
-        String url = BOOT_BASE_URL + deviceName + "/boot.img";
+    public void downloadTWRP() {
+        String url = TWRP_BASE_URL + deviceName + "/recovery.img";
         Log.d(LOG_TAG, "downloading " + url);
         DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
-        request.setDescription("kernel for " + deviceName);
-        request.setTitle("kernel.img");
+        request.setDescription("TWRP recovery for " + deviceName);
+        request.setTitle("twrp.img");
         request.allowScanningByMediaScanner();
         request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
-        final File boot = new File(dir.bootPath());
-        Log.d(LOG_TAG, "Saving at " + dir.bootPath());
-        if (boot.exists() || boot.isFile()){
+        final File twrp = new File(dir.twrpPath());
+        Log.d(LOG_TAG, "Saving at " + dir.twrpPath());
+        if (twrp.exists() || twrp.isFile()){
             AlertDialog.Builder tex = new AlertDialog.Builder(c);
             tex.setTitle("FILE EXISTS");
-            tex.setMessage(c.getString(R.string.alert_exists_boot_image));
+            tex.setMessage(c.getString(R.string.alert_exists_twrp_image));
             tex.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {
-                    boot.delete();
+                    twrp.delete();
                 }
             });
             tex.show();
         }
-        request.setDestinationUri(Uri.parse("file://" + dir.bootPath()));
+        request.setDestinationUri(Uri.parse("file://" + dir.twrpPath()));
         DownloadManager manager = (DownloadManager) c.getSystemService(Context.DOWNLOAD_SERVICE);
         manager.enqueue(request);
         Toast done = Toast.makeText(c,
-                "kernel image downloading to \n"
-                + boot.getPath(),
+                "TWRP Recovery image downloading to \n"
+                + twrp.getPath(),
+                Toast.LENGTH_LONG);
+        done.show();
+    }
+
+    public void downloadCWM() {
+        String url = CWM_BASE_URL + deviceName + "/recovery.img";
+        Log.d(LOG_TAG, "downloading " + url);
+        DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
+        request.setDescription("CWM recovery for " + deviceName);
+        request.setTitle("cwm.img");
+        request.allowScanningByMediaScanner();
+        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+        final File cwm = new File(dir.twrpPath());
+        Log.d(LOG_TAG, "Saving at " + dir.cwmPath());
+        if (cwm.exists() || cwm.isFile()) {
+            AlertDialog.Builder cex = new AlertDialog.Builder(c);
+            cex.setTitle("FILE EXISTS");
+            cex.setMessage(c.getString(R.string.alert_exists_cwm_image));
+            cex.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    cwm.delete();
+                }
+            });
+            cex.show();
+        }
+        request.setDestinationUri(Uri.parse("file://" + dir.cwmPath()));
+        DownloadManager manager = (DownloadManager) c.getSystemService(Context.DOWNLOAD_SERVICE);
+        manager.enqueue(request);
+        Toast done = Toast.makeText(c,
+                "CWM Recovery image downloading to \n"
+                        + cwm.getPath(),
+                Toast.LENGTH_LONG);
+        done.show();
+    }
+
+
+    public void downloadPhilz() {
+        String url = PHILZ_BASE_URL + deviceName + "/boot.img";
+        Log.d(LOG_TAG, "downloading " + url);
+        DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
+        request.setDescription("Philz-Touch recovery for " + deviceName);
+        request.setTitle("philz.img");
+        request.allowScanningByMediaScanner();
+        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+        final File philz = new File(dir.philzPath());
+        Log.d(LOG_TAG, "Saving at " + dir.philzPath());
+        if (philz.exists() || philz.isFile()) {
+            AlertDialog.Builder cex = new AlertDialog.Builder(c);
+            cex.setTitle("FILE EXISTS");
+            cex.setMessage(c.getString(R.string.alert_exists_philz_image));
+            cex.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    philz.delete();
+                }
+            });
+            cex.show();
+        }
+        request.setDestinationUri(Uri.parse("file://" + dir.philzPath()));
+        DownloadManager manager = (DownloadManager) c.getSystemService(Context.DOWNLOAD_SERVICE);
+        manager.enqueue(request);
+        Toast done = Toast.makeText(c,
+                "Philz-Touch Recovery image downloading to \n"
+                        + philz.getPath(),
                 Toast.LENGTH_LONG);
         done.show();
     }

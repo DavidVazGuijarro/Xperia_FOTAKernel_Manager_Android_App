@@ -1,4 +1,4 @@
-package com.davidvaz.bootxperia;
+package com.davidvaz.twrpxperia;
 
 import android.app.ActionBar;
 import android.app.Activity;
@@ -13,18 +13,22 @@ import android.support.v4.widget.DrawerLayout;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.davidvaz.bootxperia.flashutils.FlashFota;
-import com.davidvaz.bootxperia.flashutils.GetImg;
-import com.davidvaz.bootxperia.fragment.FotaFragment;
-import com.davidvaz.bootxperia.fragment.BootFragment;
+import com.davidvaz.twrpxperia.flashutils.FlashFota;
+import com.davidvaz.twrpxperia.flashutils.GetImg;
+import com.davidvaz.twrpxperia.fragment.CwmFragment;
+import com.davidvaz.twrpxperia.fragment.FotaFragment;
+import com.davidvaz.twrpxperia.fragment.PhilzFragment;
+import com.davidvaz.twrpxperia.fragment.TwrpFragment;
 
 ;
 
 public class MainActivity extends Activity
         implements
         NavigationDrawerFragment.NavigationDrawerCallbacks,
+        CwmFragment.OnFragmentInteractionListener,
+        PhilzFragment.OnFragmentInteractionListener,
         FotaFragment.OnFragmentInteractionListener,
-        BootFragment.OnFragmentInteractionListener {
+        TwrpFragment.OnFragmentInteractionListener {
 
     private String HAS_ROOT_PREF = "hasRoot";
 
@@ -61,7 +65,7 @@ public class MainActivity extends Activity
             AlertDialog.Builder noSupportAlert = new AlertDialog.Builder(this);
             noSupportAlert.setTitle("UNSUPPORTED DEVICE");
             noSupportAlert.setMessage
-                    ("This device is not supported by the app" +
+                    ("This device is not officially supported by the app" +
                     "\n" +
                     "Recoveries downloaded by the app may not be compatible" +
                     "with your device as it has not been tested on it" +
@@ -139,7 +143,17 @@ public class MainActivity extends Activity
                 break;
             case 1:
                 fragmentManager.beginTransaction()
-                        .replace(R.id.container, BootFragment.newInstance("A", "a"))
+                        .replace(R.id.container, TwrpFragment.newInstance("A", "a"))
+                        .commit();
+                break;
+            case 2:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, CwmFragment.newInstance("A", "a"))
+                        .commit();
+                break;
+            case 3:
+                fragmentManager.beginTransaction()
+                        .replace(R.id.container, PhilzFragment.newInstance("A", "a"))
                         .commit();
                 break;
         }
@@ -172,7 +186,6 @@ public class MainActivity extends Activity
         }
         return super.onCreateOptionsMenu(menu);
     }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
