@@ -5,14 +5,14 @@ import android.os.Environment;
 import java.io.File;
 
 /**
- * Created by davidvaz on 23/1/14.
+ * Created by davidvaz on 15/3/2015.
  */
 public class SaveDir {
 
     private String LOG_TAG = "XRM";
 
     public static String STORAGE_DIRECTORY = Environment.getExternalStorageDirectory().getPath() + "/BootXperia/";
-    public static String RAW_BOOT_PATH = "/sdcard/BootXperia/twrp.img";
+    public static String RAW_TWRP_PATH = "/sdcard/BootXperia/twrp.img";
     public static String RAW_BACKUP_PATH = "/sdcard/BootXperia/fotabackup.img";
     public static String RAW_CWM_PATH = "/sdcard/BootXperia/cwm.img";
     public static String RAW_PHILZ_PATH = "/sdcard/BootXperia/philz.img";
@@ -29,9 +29,9 @@ public class SaveDir {
         return cwm.exists();
     }
 
-    public Boolean existsbootImage() {
-        File boot = new File(STORAGE_DIRECTORY + "twrp.img");
-        return boot.exists();
+    public Boolean existsTwrpImage() {
+        File twrp = new File(STORAGE_DIRECTORY + "twrp.img");
+        return twrp.exists();
     }
 
     public Boolean existsPhilzImage() {
@@ -48,7 +48,7 @@ public class SaveDir {
         return STORAGE_DIRECTORY + "cwm.img";
     }
 
-    public String bootPath() {
+    public String twrpPath() {
         return STORAGE_DIRECTORY + "twrp.img";
     }
 
@@ -65,8 +65,8 @@ public class SaveDir {
         File f = new File(cwmPath());
         return (((f.length() / 1024) / 1024) > 5);
     }
-    public Boolean validboot() {
-        File f = new File(bootPath());
+    public Boolean validTwrp() {
+        File f = new File(twrpPath());
         return (((f.length() / 1024) / 1024) > 5);
     }
     public Boolean validPhilz() {

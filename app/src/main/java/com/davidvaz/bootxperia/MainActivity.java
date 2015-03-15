@@ -1,4 +1,4 @@
-package com.davidvaz.twrpxperia;
+package com.davidvaz.bootxperia;
 
 import android.app.ActionBar;
 import android.app.Activity;
@@ -13,12 +13,12 @@ import android.support.v4.widget.DrawerLayout;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.davidvaz.twrpxperia.flashutils.FlashFota;
-import com.davidvaz.twrpxperia.flashutils.GetImg;
-import com.davidvaz.twrpxperia.fragment.CwmFragment;
-import com.davidvaz.twrpxperia.fragment.FotaFragment;
-import com.davidvaz.twrpxperia.fragment.PhilzFragment;
-import com.davidvaz.twrpxperia.fragment.TwrpFragment;
+import com.davidvaz.bootxperia.flashutils.FlashFota;
+import com.davidvaz.bootxperia.flashutils.GetImg;
+import com.davidvaz.bootxperia.fragment.CwmFragment;
+import com.davidvaz.bootxperia.fragment.FotaFragment;
+import com.davidvaz.bootxperia.fragment.PhilzFragment;
+import com.davidvaz.bootxperia.fragment.TwrpFragment;
 
 ;
 

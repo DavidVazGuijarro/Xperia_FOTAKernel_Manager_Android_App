@@ -1,4 +1,4 @@
-package com.davidvaz.twrpxperia.fragment;
+package com.davidvaz.bootxperia.fragment;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -13,23 +13,23 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.davidvaz.twrpxperia.R;
-import com.davidvaz.twrpxperia.flashutils.FlashFota;
-import com.davidvaz.twrpxperia.flashutils.GetImg;
-import com.davidvaz.twrpxperia.flashutils.SaveDir;
+import com.davidvaz.bootxperia.R;
+import com.davidvaz.bootxperia.flashutils.FlashFota;
+import com.davidvaz.bootxperia.flashutils.GetImg;
+import com.davidvaz.bootxperia.flashutils.SaveDir;
 
 
 /**
  * A simple {@link android.support.v4.app.Fragment} subclass.
- * Activities that contain this com.davidvaz.twrpxperia.fragment must implement the
- * {@link com.davidvaz.twrpxperia.fragment.PhilzFragment.OnFragmentInteractionListener} interface
+ * Activities that contain this com.davidvaz.bootxperia.fragment must implement the
+ * {@link com.davidvaz.bootxperia.fragment.PhilzFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link com.davidvaz.twrpxperia.fragment.PhilzFragment#newInstance} factory method to
- * create an instance of this com.davidvaz.twrpxperia.fragment.
+ * Use the {@link com.davidvaz.bootxperia.fragment.PhilzFragment#newInstance} factory method to
+ * create an instance of this com.davidvaz.bootxperia.fragment.
  */
 public class PhilzFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
-    // the com.davidvaz.twrpxperia.fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+    // the com.davidvaz.bootxperia.fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
@@ -50,11 +50,11 @@ public class PhilzFragment extends Fragment {
 
     /**
      * Use this factory method to create a new instance of
-     * this com.davidvaz.twrpxperia.fragment using the provided parameters.
+     * this com.davidvaz.bootxperia.fragment using the provided parameters.
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of com.davidvaz.twrpxperia.fragment PhilzFragment.
+     * @return A new instance of com.davidvaz.bootxperia.fragment PhilzFragment.
      */
     // TODO: Rename and change types and number of parameters
     public static PhilzFragment newInstance(String param1, String param2) {
@@ -88,7 +88,7 @@ public class PhilzFragment extends Fragment {
     @Override
     public View onCreateView(final LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this com.davidvaz.twrpxperia.fragment
+        // Inflate the layout for this com.davidvaz.bootxperia.fragment
         final View rootView = inflater.inflate(R.layout.fragment_philz, container, false);
         final Button downloadButton = (Button) rootView.findViewById(R.id.philz_download_button);
         Button flashButton = (Button) rootView.findViewById(R.id.philz_flash_button);
@@ -157,7 +157,7 @@ public class PhilzFragment extends Fragment {
 
     /**
      * This interface must be implemented by activities that contain this
-     * com.davidvaz.twrpxperia.fragment to allow an interaction in this com.davidvaz.twrpxperia.fragment to be communicated
+     * com.davidvaz.bootxperia.fragment to allow an interaction in this com.davidvaz.bootxperia.fragment to be communicated
      * to the activity and potentially other fragments contained in that
      * activity.
      * <p/>

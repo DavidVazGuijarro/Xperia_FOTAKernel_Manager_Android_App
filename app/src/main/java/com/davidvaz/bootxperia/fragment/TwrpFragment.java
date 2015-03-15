@@ -21,15 +21,15 @@ import com.davidvaz.bootxperia.flashutils.SaveDir;
 
 /**
  * A simple {android.support.v4.app.Fragment} subclass.
- * Activities that contain this com.davidvaz.twrpxperia.fragment must implement the
+ * Activities that contain this com.davidvaz.bootxperia.fragment must implement the
  * {@link TwrpFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
  * Use the {@link TwrpFragment#newInstance} factory method to
- * create an instance of this com.davidvaz.twrpxperia.fragment.
+ * create an instance of this com.davidvaz.bootxperia.fragment.
  */
 public class TwrpFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
-    // the com.davidvaz.twrpxperia.fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+    // the com.davidvaz.bootxperia.fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
@@ -51,11 +51,11 @@ public class TwrpFragment extends Fragment {
 
     /**
      * Use this factory method to create a new instance of
-     * this com.davidvaz.twrpxperia.fragment using the provided parameters.
+     * this com.davidvaz.bootxperia.fragment using the provided parameters.
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of com.davidvaz.twrpxperia.fragment TwrpFragment.
+     * @return A new instance of com.davidvaz.bootxperia.fragment TwrpFragment.
      */
     // TODO: Rename and change types and number of parameters
     public static TwrpFragment newInstance(String param1, String param2) {
@@ -89,7 +89,7 @@ public class TwrpFragment extends Fragment {
     @Override
     public View onCreateView(final LayoutInflater inflater, final ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this com.davidvaz.twrpxperia.fragment
+        // Inflate the layout for this com.davidvaz.bootxperia.fragment
         final View rootView = inflater.inflate(R.layout.fragment_twrp, container, false);
         final Button downloadButton = (Button) rootView.findViewById(R.id.twrp_download_button);
         Button flashButton = (Button) rootView.findViewById(R.id.twrp_flash_button);
@@ -158,7 +158,7 @@ public class TwrpFragment extends Fragment {
 
     /**
      * This interface must be implemented by activities that contain this
-     * com.davidvaz.twrpxperia.fragment to allow an interaction in this com.davidvaz.twrpxperia.fragment to be communicated
+     * com.davidvaz.bootxperia.fragment to allow an interaction in this com.davidvaz.bootxperia.fragment to be communicated
      * to the activity and potentially other fragments contained in that
      * activity.
      * <p/>

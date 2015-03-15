@@ -14,14 +14,14 @@ import java.io.File;
 import com.davidvaz.bootxperia.R;
 
 /**
- * Created by davidvaz on 26/1/14.
+ * Created by davidvaz on 15/3/2015.
  */
 public class GetImg {
     private String LOG_TAG = "XRM";
 
-    private static String TWRP_BASE_URL = "http://davidvazguijarro.uni.me/davidvazguijarro/boot/twrp/";
-    private static String CWM_BASE_URL = "http://davidvazguijarro.uni.me/davidvazguijarro/boot/cwm/";
-    private static String PHILZ_BASE_URL = "http://davidvazguijarro.uni.me/davidvazguijarro/boot/philz/";
+    private static String TWRP_BASE_URL = "http://davidvazguijarro.uni.me/davidvazguijarro/boot/boot/twrp/";
+    private static String CWM_BASE_URL = "http://davidvazguijarro.uni.me/davidvazguijarro/boot/boot/cwm/";
+    private static String PHILZ_BASE_URL = "http://davidvazguijarro.uni.me/davidvazguijarro/boot/boot/philz/";
     
 
     private String[] codenames, props;
@@ -52,10 +52,10 @@ public class GetImg {
     }
 
     public void downloadTWRP() {
-        String url = TWRP_BASE_URL + deviceName + "/recovery.img";
+        String url = TWRP_BASE_URL + deviceName + "/boot.img";
         Log.d(LOG_TAG, "downloading " + url);
         DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
-        request.setDescription("TWRP recovery for " + deviceName);
+        request.setDescription("TWRP for " + deviceName);
         request.setTitle("twrp.img");
         request.allowScanningByMediaScanner();
         request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
@@ -77,17 +77,17 @@ public class GetImg {
         DownloadManager manager = (DownloadManager) c.getSystemService(Context.DOWNLOAD_SERVICE);
         manager.enqueue(request);
         Toast done = Toast.makeText(c,
-                "TWRP Recovery image downloading to \n"
+                "TWRP downloading to \n"
                 + twrp.getPath(),
                 Toast.LENGTH_LONG);
         done.show();
     }
 
     public void downloadCWM() {
-        String url = CWM_BASE_URL + deviceName + "/recovery.img";
+        String url = CWM_BASE_URL + deviceName + "/boot.img";
         Log.d(LOG_TAG, "downloading " + url);
         DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
-        request.setDescription("CWM recovery for " + deviceName);
+        request.setDescription("CWM for " + deviceName);
         request.setTitle("cwm.img");
         request.allowScanningByMediaScanner();
         request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
@@ -109,7 +109,7 @@ public class GetImg {
         DownloadManager manager = (DownloadManager) c.getSystemService(Context.DOWNLOAD_SERVICE);
         manager.enqueue(request);
         Toast done = Toast.makeText(c,
-                "CWM Recovery image downloading to \n"
+                "CWM downloading to \n"
                         + cwm.getPath(),
                 Toast.LENGTH_LONG);
         done.show();
@@ -120,7 +120,7 @@ public class GetImg {
         String url = PHILZ_BASE_URL + deviceName + "/boot.img";
         Log.d(LOG_TAG, "downloading " + url);
         DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
-        request.setDescription("Philz-Touch recovery for " + deviceName);
+        request.setDescription("Philz-Touch for " + deviceName);
         request.setTitle("philz.img");
         request.allowScanningByMediaScanner();
         request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
@@ -142,7 +142,7 @@ public class GetImg {
         DownloadManager manager = (DownloadManager) c.getSystemService(Context.DOWNLOAD_SERVICE);
         manager.enqueue(request);
         Toast done = Toast.makeText(c,
-                "Philz-Touch Recovery image downloading to \n"
+                "Philz-Touch downloading to \n"
                         + philz.getPath(),
                 Toast.LENGTH_LONG);
         done.show();
