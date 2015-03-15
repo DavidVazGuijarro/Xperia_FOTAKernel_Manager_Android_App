@@ -17,17 +17,20 @@
     <string name="fota_backup_button">BACKUP</string>
     <string name="fota_restore_button">RESTORE</string>
 
-    <string name="cwm_download_button">DOWLOAD</string>
+    <string name="cwm_download_button">DOWNLOAD</string>
     <string name="cwm_download_desc">Get latest CWM Recovery \n image for your device</string>
     <string name="cwm_flash_button">FLASH</string>
     <string name="cwm_flash_desc">Flash the downloaded CWM Image \n to your FOTAKernel partition</string>
+    
+    <string name="warning">WARNING: THIS APP FLASH A CUSTOM KERNEL IN YOUR DEVICE TO GET A WORKING CUSTOM RECOVERY. NEED ROOT AND BOOTLOADER UNLOCKED</string>
+    <string name="warningbackup">PLEASE, MAKE A BACKUP BEFORE USE THIS APP.</string>
 
-    <string name="twrp_download_button">DOWLOAD</string>
+    <string name="twrp_download_button">DOWNLOAD</string>
     <string name="twrp_download_desc">Get latest TWRP Recovery \n image for your device</string>
     <string name="twrp_flash_button">FLASH</string>
     <string name="twrp_flash_desc">Flash the downloaded TWRP Image \n to your FOTAKernel partition</string>
 
-    <string name="philz_download_button">DOWLOAD</string>
+    <string name="philz_download_button">DOWNLOAD</string>
     <string name="philz_download_desc">Get latest Philz-Touch Recovery \n image for your device</string>
     <string name="philz_flash_button">FLASH</string>
     <string name="philz_flash_desc">Flash the downloaded Philz-Touch Image \n to your FOTAKernel partition</string>
@@ -50,3 +53,4 @@
 
 
 </resources>
+                                                                                                                                         
