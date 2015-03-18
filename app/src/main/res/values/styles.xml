@@ -1,11 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <!--<style name="AppTheme" parent="AppTheme.Base"/>-->
- 
-    <!--<style name="AppTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">-->
-    <!--<style name="AppTheme" parent="android:Theme.Material.Light.DarkActionBar"> -->
-    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+    <style name="AppDefTheme" parent="android:Theme.DeviceDefault">
         <!-- Customize your theme here. -->
  
         <!-- colorPrimary is used for the default action bar background -->

@@ -6,7 +6,7 @@
     android:divider="@android:color/transparent"
     android:dividerHeight="0dp"
     tools:context="com.davidvaz.bootxperia.NavigationDrawerFragment"
-    style="@style/AppTheme"
+    style="@style/AppDefTheme"
     android:background="#cccc"
     android:backgroundTintMode="multiply"
     android:clickable="false"
