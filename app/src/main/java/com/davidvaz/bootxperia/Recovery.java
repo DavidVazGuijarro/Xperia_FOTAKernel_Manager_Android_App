@@ -28,7 +28,7 @@ public class Recovery extends Fragment implements View.OnClickListener{
     private View _myFragmentView;
     private OnFragmentInteractionListener mListener;
     String _recovery;
-    public static final String _recoveryPath = "/sdcard/recovery.img";
+    public static final String _recoveryPath = "/sdcard/BootXperia/recovery.img";
 
     public Recovery() {
         // Required empty public constructor
@@ -176,7 +176,7 @@ public class Recovery extends Fragment implements View.OnClickListener{
         //Remove old recovery.img
         Runtime.getRuntime().exec(new String[]{"su", "-c", "rm "+ _recoveryPath});
         //Download new recovery.img
-        DownloadFileAsync.downloadFile(getActivity(), getString(R.string.DownloadDialog), _recoveryPath, "https://raw.githubusercontent.com/DavidVazGuijarro/M5_Settings/master/recovery/"+ _recovery);
+        DownloadFileAsync.downloadFile(getActivity(), getString(R.string.DownloadDialog), _recoveryPath, "http://davidvazguijarro.uni.me/davidvazguijarro/recovery/"+ _recovery);
     }
 
     public void flashRecovery() throws IOException{
