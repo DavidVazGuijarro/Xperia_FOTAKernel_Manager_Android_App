@@ -22,13 +22,14 @@ import java.io.IOException;
  * {@link Recovery.OnFragmentInteractionListener} interface
  * to handle interaction events.
  */
+ 
 public class Recovery extends Fragment implements View.OnClickListener{
 
     public static final String PREFS_NAME = "M5SettingsPrefs";
     private View _myFragmentView;
     private OnFragmentInteractionListener mListener;
     String _recovery;
-    public static final String _recoveryPath = "/sdcard/BootXperia/recovery.img";
+    public static final String _recoveryPath = "/sdcard/recovery.img";
 
     public Recovery() {
         // Required empty public constructor
