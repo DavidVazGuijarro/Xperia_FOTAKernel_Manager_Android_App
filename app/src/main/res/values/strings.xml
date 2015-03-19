@@ -2,15 +2,11 @@
 <resources>
 
     <string name="app_name">Xperia Recovery Manager</string>
-    <string name="title_d2w">Doubletap 2 Wake</string>
     <string name="title_recovery">Recovery</string>
     <string name="menu_about">About</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="about_M5S">This App has originally been created by Christian \'Myself5\' and ported by David \'David_Vaz\'</string>
-    <string name="d2w_on">Doubletap to Wake Enabled</string>
-    <string name="d2w_off">Doubletap to Wake Disabled</string>
-    <string name="persist">Persist D2W Settings (after Reboot)</string>
     <string name="CWM">CWM</string>
     <string name="TWRP">TWRP</string>
     <string name="PhilZ">PhilZ Touch</string>
@@ -20,9 +16,6 @@
     <string name="DownloadDialog">Downloading Recovery</string>
     <string name="recovery_flashed">Recovery Flashed!</string>
     <string name="About_Recovery">Here you can download and flash the Recovery you like. NOTE: This currently only works for the Sony Xperia Z3.</string>
-    <string name="About_D2W">Here you can toggle Double Tap to Wake.</string>
-    <string name="d2w_enabled">D2W Enabled!</string>
-    <string name="d2w_disabled">D2W Disabled!</string>
     <string name="reboot_recovery">Reboot to Recovery</string>
     <string name="reboot_bootloader">Reboot to Bootloader</string>
     <string name="rebooting">Rebooting Now!</string>

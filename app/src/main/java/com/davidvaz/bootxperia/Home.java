@@ -19,7 +19,7 @@ import android.support.v4.widget.DrawerLayout;
 
 
 public class Home extends Activity
-        implements D2W.OnFragmentInteractionListener, Recovery.OnFragmentInteractionListener, NavigationDrawerFragment.NavigationDrawerCallbacks {
+        implements Recovery.OnFragmentInteractionListener, NavigationDrawerFragment.NavigationDrawerCallbacks {
 
     /**
      * Fragment managing the behaviors, interactions and presentation of the navigation drawer.
@@ -51,12 +51,6 @@ public class Home extends Activity
         FragmentManager fragmentManager = getFragmentManager();
         switch (position) {
             case 0:
-                //D2W
-                fragmentManager.beginTransaction()
-                        .replace(R.id.container, new D2W())
-                        .commit();
-                break;
-            case 1:
                 //Recovery
                 fragmentManager.beginTransaction()
                         .replace(R.id.container, new Recovery())
@@ -68,9 +62,6 @@ public class Home extends Activity
     public void onSectionAttached(int number) {
         switch (number) {
             case 1:
-                mTitle = getString(R.string.title_d2w);
-                break;
-            case 2:
                 mTitle = getString(R.string.title_recovery);
                 break;
         }
