@@ -16,15 +16,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <receiver
-            android:name="com.davidvaz.bootxperia.D2WApplyatBoot"
-            android:enabled="true"
-            android:exported="true"
-            android:label="D2WApplyatBoot">
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-            </intent-filter>
-        </receiver>
         <activity
             android:name="com.davidvaz.bootxperia.About"
             android:label="@string/menu_about"

@@ -42,60 +42,44 @@ category#android.intent.category.LAUNCHER
 ADDED from AndroidManifest.xml:16:17
 	android:name
 		ADDED from AndroidManifest.xml:16:27
-receiver#com.davidvaz.bootxperia.D2WApplyatBoot
+activity#com.davidvaz.bootxperia.About
 ADDED from AndroidManifest.xml:19:9
 	android:label
-		ADDED from AndroidManifest.xml:23:13
-	android:exported
-		ADDED from AndroidManifest.xml:22:13
-	android:enabled
 		ADDED from AndroidManifest.xml:21:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:22:13
 	android:name
 		ADDED from AndroidManifest.xml:20:13
-intent-filter#android.intent.action.BOOT_COMPLETED
-ADDED from AndroidManifest.xml:24:13
-action#android.intent.action.BOOT_COMPLETED
-ADDED from AndroidManifest.xml:25:17
-	android:name
-		ADDED from AndroidManifest.xml:25:25
-activity#com.davidvaz.bootxperia.About
-ADDED from AndroidManifest.xml:28:9
-	android:label
-		ADDED from AndroidManifest.xml:30:13
-	android:parentActivityName
-		ADDED from AndroidManifest.xml:31:13
-	android:name
-		ADDED from AndroidManifest.xml:29:13
 meta-data#android.support.PARENT_ACTIVITY
-ADDED from AndroidManifest.xml:32:13
+ADDED from AndroidManifest.xml:23:13
 	android:name
-		ADDED from AndroidManifest.xml:33:17
+		ADDED from AndroidManifest.xml:24:17
 	android:value
-		ADDED from AndroidManifest.xml:34:17
+		ADDED from AndroidManifest.xml:25:17
 uses-permission#android.permission.ACCESS_SUPERUSER
-ADDED from AndroidManifest.xml:37:5
+ADDED from AndroidManifest.xml:28:5
 	android:name
-		ADDED from AndroidManifest.xml:37:22
+		ADDED from AndroidManifest.xml:28:22
 uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
-ADDED from AndroidManifest.xml:38:5
+ADDED from AndroidManifest.xml:29:5
 	android:name
-		ADDED from AndroidManifest.xml:38:22
+		ADDED from AndroidManifest.xml:29:22
 uses-permission#android.permission.INTERNET
-ADDED from AndroidManifest.xml:39:5
+ADDED from AndroidManifest.xml:30:5
 	android:name
-		ADDED from AndroidManifest.xml:39:22
+		ADDED from AndroidManifest.xml:30:22
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from AndroidManifest.xml:40:5
+ADDED from AndroidManifest.xml:31:5
 	android:name
-		ADDED from AndroidManifest.xml:40:22
+		ADDED from AndroidManifest.xml:31:22
 uses-permission#android.permission.READ_PHONE_STATE
-ADDED from AndroidManifest.xml:41:5
+ADDED from AndroidManifest.xml:32:5
 	android:name
-		ADDED from AndroidManifest.xml:41:22
+		ADDED from AndroidManifest.xml:32:22
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from AndroidManifest.xml:42:5
+ADDED from AndroidManifest.xml:33:5
 	android:name
-		ADDED from AndroidManifest.xml:42:22
+		ADDED from AndroidManifest.xml:33:22
 uses-sdk
 INJECTED from AndroidManifest.xml:0:0 reason: use-sdk injection requested
 MERGED from com.android.support:support-v4:21.0.3:15:5
