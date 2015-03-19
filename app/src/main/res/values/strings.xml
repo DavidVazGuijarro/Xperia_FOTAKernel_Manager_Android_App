@@ -1,56 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Xperia Kernel Manager</string>
+    <string name="app_name">M5 Settings</string>
+    <string name="title_d2w">Doubletap 2 Wake</string>
+    <string name="title_recovery">Recovery Tools</string>
+    <string name="menu_about">About</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="action_example">Example action</string>
-    <string name="action_settings">Settings</string>
-
-
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-
-    <string name="fota_restore_desc">Restore a backed up\n FOTAKernel image</string>
-    <string name="fota_backup_desc">Backup the FOTAKernel\n parition as an image</string>
-    <string name="fota_format_desc">Write zeroes to the\n FOTAKernel partition</string>
-    <string name="fota_format_button">FORMAT</string>
-    <string name="fota_backup_button">BACKUP</string>
-    <string name="fota_restore_button">RESTORE</string>
-
-    <string name="cwm_download_button">DOWNLOAD</string>
-    <string name="cwm_download_desc">Get latest CWM Recovery \n image for your device</string>
-    <string name="cwm_flash_button">FLASH</string>
-    <string name="cwm_flash_desc">Flash the downloaded CWM Image \n to your FOTAKernel partition</string>
-    
-    <string name="warning">WARNING: THIS APP FLASH A CUSTOM KERNEL IN YOUR DEVICE TO GET A WORKING CUSTOM RECOVERY. NEED ROOT AND BOOTLOADER UNLOCKED</string>
-    <string name="warningbackup">PLEASE, MAKE A BACKUP BEFORE USE THIS APP.</string>
-
-    <string name="twrp_download_button">DOWNLOAD</string>
-    <string name="twrp_download_desc">Get latest TWRP Recovery \n image for your device</string>
-    <string name="twrp_flash_button">FLASH</string>
-    <string name="twrp_flash_desc">Flash the downloaded TWRP Image \n to your FOTAKernel partition</string>
-
-    <string name="philz_download_button">DOWNLOAD</string>
-    <string name="philz_download_desc">Get latest Philz-Touch Recovery \n image for your device</string>
-    <string name="philz_flash_button">FLASH</string>
-    <string name="philz_flash_desc">Flash the downloaded Philz-Touch Image \n to your FOTAKernel partition</string>
-
-    <string name="flashfota_format_succeeded">Successfully formatted FOTAKernel partition</string>
-    <string name="flashfota_format_failed">Failed to flash FOTAKernel partition</string>
-    <string name="flashfota_backup_succeeded">Successfully backed up FOTAKernel</string>
-    <string name="flashfota_backup_failed">Failed to backup FOTAkernel</string>
-    <string name="flashfota_restore_succeeded">Successfully restored FOTAKernel backup</string>
-    <string name="flashfota_restore_failed">Failed to restore FOTAkernel backup</string>
-    <string name="fotaflash_flash_succeeded">Successfully flashed FOTAKernel partition</string>
-    <string name="fotaflash_flash_failed">Failed to flash FOTAKernel partition</string>
-
-    <string name="alert_invalid_cwm_image">The size of cwm.img is too small. It might be an invalid CWM image as result of incomplete or corrupt download</string>
-    <string name="alert_invalid_philz_image">The size of philz.img is too small. It might be an invalid Philz image as result of incomplete or corrupt download</string>
-    <string name="alert_invalid_twrp_image">The size of twrp.img is too small. It might be an invalid TWRP image as result of incomplete or corrupt download</string>
-    <string name="alert_exists_cwm_image">A CWM recovery image already exists on your device. It will be replaced by the file being downloaded now.</string>
-    <string name="alert_exists_philz_image">A Philz-Touch recovery image already exists on your device. It will be replaced by the file being downloaded now.</string>
-    <string name="alert_exists_twrp_image">A TWRP recovery image already exists on your device. It will be replaced by the file being downloaded now.</string>
-
-
+    <string name="about_M5S">This App has originally been created by Christian \'Myself5\' Oder with the help of Shlomy \'sreinst1\' Reinstein for use with M5-Kernel. \n Thanks to Damian \'pixeldotz\' Deaucali for creating the Icon!</string>
+    <string name="d2w_on">Doubletap to Wake Enabled</string>
+    <string name="d2w_off">Doubletap to Wake Disabled</string>
+    <string name="persist">Persist D2W Settings (after Reboot)</string>
+    <string name="CWM">CWM</string>
+    <string name="TWRP">TWRP</string>
+    <string name="PhilZ">PhilZ Touch</string>
+    <string name="Recovery">Select Recovery to Download and Flash:</string>
+    <string name="Download">Download</string>
+    <string name="Flash">Flash Recovery</string>
+    <string name="DownloadDialog">Downloading Recovery</string>
+    <string name="recovery_flashed">Recovery Flashed!</string>
+    <string name="About_Recovery">Here you can download and flash the Recovery you like. NOTE: This currently only works for the Z2.</string>
+    <string name="About_D2W">Here you can toggle Double Tap to Wake.</string>
+    <string name="d2w_enabled">D2W Enabled!</string>
+    <string name="d2w_disabled">D2W Disabled!</string>
+    <string name="reboot_recovery">Reboot to Recovery</string>
+    <string name="reboot_bootloader">Reboot to Bootloader</string>
+    <string name="rebooting">Rebooting Now!</string>
 </resources>
-                                                                                                                                         

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/XperiApp.iml" filepath="$PROJECT_DIR$/XperiApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/XKM.iml" filepath="$PROJECT_DIR$/XKM.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
