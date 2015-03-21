@@ -17,39 +17,48 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Download"
+        android:theme="@style/ButtonTheme"
         android:layout_below="@+id/radioGroup"
-        android:layout_alignEnd="@+id/flash_button"
         android:layout_alignStart="@+id/flash_button"
-        android:theme="@style/ButtonTheme"/>
+        android:layout_alignEnd="@+id/flash_button" />
 
     <Button
         android:id="@+id/flash_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/Flash"
+        android:theme="@style/ButtonTheme"
         android:layout_below="@+id/download_button"
-        android:layout_centerHorizontal="true"
-        android:theme="@style/ButtonTheme"/>
+        android:layout_centerHorizontal="true" />
+        
+    <Button
+        android:id="@+id/reboot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reboot"
+        android:theme="@style/ButtonTheme"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/reboot_recovery"
+        android:layout_alignEnd="@+id/reboot_recovery" />
 
     <Button
         android:id="@+id/reboot_recovery"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/reboot_recovery"
-        android:layout_below="@+id/flash_button"
-        android:layout_marginTop="64dp"
-        android:layout_alignStart="@+id/reboot_bootloader"
+        android:theme="@style/ButtonTheme"
+        android:layout_below="@+id/reboot"
         android:layout_alignEnd="@+id/reboot_bootloader"
-        android:theme="@style/ButtonTheme"/>
+        android:layout_alignStart="@+id/reboot_bootloader" />
 
     <Button
         android:id="@+id/reboot_bootloader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/reboot_bootloader"
+        android:theme="@style/ButtonTheme"
         android:layout_below="@+id/reboot_recovery"
-        android:layout_centerHorizontal="true"
-        android:theme="@style/ButtonTheme"/>
+        android:layout_centerHorizontal="true" />
 
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_height="wrap_content"
@@ -76,6 +85,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/TWRP"
+            android:layout_weight="1" />
+            
+        <RadioButton android:id="@+id/radio_STOCK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/STOCK"
             android:layout_weight="1" />
     </RadioGroup>
 

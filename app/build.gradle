@@ -8,8 +8,8 @@ android {
         applicationId "com.davidvaz.bootxperia"
         minSdkVersion 21
         targetSdkVersion 22
-        versionCode 6
-        versionName "6"
+        versionCode 7
+        versionName "7"
     }
     buildTypes {
         release {

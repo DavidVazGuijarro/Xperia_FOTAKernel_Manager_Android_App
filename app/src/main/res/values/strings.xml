@@ -9,13 +9,15 @@
     <string name="about_M5S">This App has originally been created by Christian \'Myself5\' and ported by David \'David_Vaz\'</string>
     <string name="CWM">CWM</string>
     <string name="TWRP">TWRP</string>
-    <string name="PhilZ">PhilZ Touch</string>
+    <string name="STOCK">STOCK</string>
+    <string name="PhilZ">PHILZ</string>
     <string name="Recovery">Select Recovery to Download and Flash:</string>
     <string name="Download">Download</string>
     <string name="Flash">Flash Recovery</string>
     <string name="DownloadDialog">Downloading Recovery</string>
     <string name="recovery_flashed">Recovery Flashed!</string>
     <string name="About_Recovery">Here you can download and flash the Recovery you like. NOTE: This currently only works for the Sony Xperia Z3.</string>
+    <string name="reboot">Reboot</string>
     <string name="reboot_recovery">Reboot to Recovery</string>
     <string name="reboot_bootloader">Reboot to Bootloader</string>
     <string name="rebooting">Rebooting Now!</string>

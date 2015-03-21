@@ -62,11 +62,18 @@ public class Recovery extends Fragment implements View.OnClickListener{
             ((RadioButton) _myFragmentView.findViewById(R.id.radio_TWRP)).setChecked(twrp_recovery);
             _recovery = "twrp.img";
         }
+        boolean stock_recovery = settings.getBoolean("recovery_STOCK", true);
+        if (stock_recovery) {
+            ((RadioButton) _myFragmentView.findViewById(R.id.radio_STOCK)).setChecked(stock_recovery);
+            _recovery = "stock.img";
+        }
         //Add the Buttons to the OnClick Listener
         Button flash = (Button) _myFragmentView.findViewById(R.id.flash_button);
         flash.setOnClickListener(this);
         Button download = (Button) _myFragmentView.findViewById(R.id.download_button);
         download.setOnClickListener(this);
+        Button reboot = (Button) _myFragmentView.findViewById(R.id.reboot);
+        reboot.setOnClickListener(this);
         Button reboot_recovery = (Button) _myFragmentView.findViewById(R.id.reboot_recovery);
         reboot_recovery.setOnClickListener(this);
         Button reboot_bootloader = (Button) _myFragmentView.findViewById(R.id.reboot_bootloader);
@@ -77,6 +84,8 @@ public class Recovery extends Fragment implements View.OnClickListener{
         philz.setOnClickListener(this);
         RadioButton twrp = (RadioButton) _myFragmentView.findViewById(R.id.radio_TWRP);
         twrp.setOnClickListener(this);
+        RadioButton stock = (RadioButton) _myFragmentView.findViewById(R.id.radio_STOCK);
+        stock.setOnClickListener(this);
         return _myFragmentView;
     }
 
@@ -112,6 +121,7 @@ public class Recovery extends Fragment implements View.OnClickListener{
         editor.putBoolean("recovery_TWRP", ((RadioButton) _myFragmentView.findViewById(R.id.radio_TWRP)).isChecked());
         editor.putBoolean("recovery_PhilZ", ((RadioButton) _myFragmentView.findViewById(R.id.radio_PhilZ)).isChecked());
         editor.putBoolean("recovery_CWM", ((RadioButton) _myFragmentView.findViewById(R.id.radio_CWM)).isChecked());
+        editor.putBoolean("recovery_STOCK", ((RadioButton) _myFragmentView.findViewById(R.id.radio_STOCK)).isChecked());
         // Commit the edits!
         editor.apply();
     }
@@ -154,6 +164,13 @@ public class Recovery extends Fragment implements View.OnClickListener{
                     e.printStackTrace();
                 }
                 break;
+            case R.id.reboot:
+                try {
+                    reboot("");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                break;
             case R.id.reboot_bootloader:
                 try {
                     reboot("bootloader");
@@ -170,6 +187,9 @@ public class Recovery extends Fragment implements View.OnClickListener{
             case R.id.radio_CWM:
                     _recovery = "cwm.img";
                 break;
+            case R.id.radio_STOCK:
+                    _recovery = "stock.img";
+                break;
         }
     }
 
@@ -182,7 +202,7 @@ public class Recovery extends Fragment implements View.OnClickListener{
 
     public void flashRecovery() throws IOException{
         //Flash recovery.img from SDCard
-        Runtime.getRuntime().exec(new String[] { "su", "-c", "dd if="+ _recoveryPath +" of=/dev/block/platform/msm_sdcc.1/by-name/FOTAKernel"});
+        Runtime.getRuntime().exec(new String[] { "su", "-c", "dd if="+ _recoveryPath +" of=/dev/block/platform/msm_sdcc.1/by-name/boot"});
 
         //Toast Message to confirm flash process
         Context context = this.getActivity().getApplicationContext();
