@@ -47,25 +47,10 @@ public class Recovery extends Fragment implements View.OnClickListener{
         _myFragmentView = inflater.inflate(R.layout.fragment_recovery, container, false);
 
         SharedPreferences settings = this.getActivity().getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
-        boolean cwm_recovery = settings.getBoolean("recovery_CWM", true);
-        if (cwm_recovery) {
-            ((RadioButton) _myFragmentView.findViewById(R.id.radio_CWM)).setChecked(cwm_recovery);
-            _recovery = "cwm.img";
-        }
-        boolean philz_recovery = settings.getBoolean("recovery_PhilZ", true);
-        if (philz_recovery) {
-            ((RadioButton) _myFragmentView.findViewById(R.id.radio_PhilZ)).setChecked(philz_recovery);
-            _recovery = "philz.img";
-        }
         boolean twrp_recovery = settings.getBoolean("recovery_TWRP", true);
         if (twrp_recovery) {
             ((RadioButton) _myFragmentView.findViewById(R.id.radio_TWRP)).setChecked(twrp_recovery);
             _recovery = "twrp.img";
-        }
-        boolean stock_recovery = settings.getBoolean("recovery_STOCK", true);
-        if (stock_recovery) {
-            ((RadioButton) _myFragmentView.findViewById(R.id.radio_STOCK)).setChecked(stock_recovery);
-            _recovery = "stock.img";
         }
         //Add the Buttons to the OnClick Listener
         Button flash = (Button) _myFragmentView.findViewById(R.id.flash_button);
@@ -78,14 +63,8 @@ public class Recovery extends Fragment implements View.OnClickListener{
         reboot_recovery.setOnClickListener(this);
         Button reboot_bootloader = (Button) _myFragmentView.findViewById(R.id.reboot_bootloader);
         reboot_bootloader.setOnClickListener(this);
-        RadioButton cwm = (RadioButton) _myFragmentView.findViewById(R.id.radio_CWM);
-        cwm.setOnClickListener(this);
-        RadioButton philz = (RadioButton) _myFragmentView.findViewById(R.id.radio_PhilZ);
-        philz.setOnClickListener(this);
         RadioButton twrp = (RadioButton) _myFragmentView.findViewById(R.id.radio_TWRP);
         twrp.setOnClickListener(this);
-        RadioButton stock = (RadioButton) _myFragmentView.findViewById(R.id.radio_STOCK);
-        stock.setOnClickListener(this);
         return _myFragmentView;
     }
 
@@ -119,9 +98,6 @@ public class Recovery extends Fragment implements View.OnClickListener{
         SharedPreferences settings = this.getActivity().getSharedPreferences(PREFS_NAME, 0);
         SharedPreferences.Editor editor = settings.edit();
         editor.putBoolean("recovery_TWRP", ((RadioButton) _myFragmentView.findViewById(R.id.radio_TWRP)).isChecked());
-        editor.putBoolean("recovery_PhilZ", ((RadioButton) _myFragmentView.findViewById(R.id.radio_PhilZ)).isChecked());
-        editor.putBoolean("recovery_CWM", ((RadioButton) _myFragmentView.findViewById(R.id.radio_CWM)).isChecked());
-        editor.putBoolean("recovery_STOCK", ((RadioButton) _myFragmentView.findViewById(R.id.radio_STOCK)).isChecked());
         // Commit the edits!
         editor.apply();
     }
@@ -180,15 +156,6 @@ public class Recovery extends Fragment implements View.OnClickListener{
                 break;
             case R.id.radio_TWRP:
                     _recovery = "twrp.img";
-                break;
-            case R.id.radio_PhilZ:
-                    _recovery = "philz.img";
-                break;
-            case R.id.radio_CWM:
-                    _recovery = "cwm.img";
-                break;
-            case R.id.radio_STOCK:
-                    _recovery = "stock.img";
                 break;
         }
     }

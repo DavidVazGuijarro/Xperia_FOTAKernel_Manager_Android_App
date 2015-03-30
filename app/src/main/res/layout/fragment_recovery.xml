@@ -10,7 +10,7 @@
         android:id="@+id/Recovery_Select"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp" />
+        android:layout_marginTop="23dp" />
 
     <Button
         android:id="@+id/download_button"
@@ -18,7 +18,7 @@
         android:layout_height="wrap_content"
         android:text="@string/Download"
         android:theme="@style/ButtonTheme"
-        android:layout_below="@+id/radioGroup"
+        android:layout_below="@+id/radio_TWRP"
         android:layout_alignStart="@+id/flash_button"
         android:layout_alignEnd="@+id/flash_button" />
 
@@ -69,29 +69,6 @@
         android:layout_below="@+id/Recovery_Select"
         android:layout_alignParentStart="true">
 
-        <RadioButton android:id="@+id/radio_CWM"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/CWM"
-            android:layout_weight="1" />
-
-        <RadioButton android:id="@+id/radio_PhilZ"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/PhilZ"
-            android:layout_weight="1" />
-
-        <RadioButton android:id="@+id/radio_TWRP"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/TWRP"
-            android:layout_weight="1" />
-            
-        <RadioButton android:id="@+id/radio_STOCK"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/STOCK"
-            android:layout_weight="1" />
     </RadioGroup>
 
     <TextView
@@ -102,4 +79,13 @@
         android:id="@+id/About_Recovery"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true" />
+
+    <RadioButton android:id="@+id/radio_TWRP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/TWRP"
+        android:layout_weight="0.06"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/radioGroup" />
+
 </RelativeLayout>
